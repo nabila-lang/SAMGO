@@ -5,6 +5,7 @@ import 'screens/signup_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/pickup_form_screen.dart';
 import 'screens/confirmation_screen.dart';
+import 'screens/detail_screen.dart';
 
 void main() {
   runApp(const SAMGOApp());
@@ -30,6 +31,7 @@ class SAMGOApp extends StatelessWidget {
         '/home': (context) => const HomeScreen(),
         '/pickup': (context) => const PickupFormScreen(),
         '/confirmation': (context) => const ConfirmationScreen(),
+        '/detail': (context) => const DetailScreen(),
       },
     );
   }
