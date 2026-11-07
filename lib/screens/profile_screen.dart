@@ -137,12 +137,6 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   const Divider(height: 1, indent: 16, endIndent: 16),
                   _menu(
-                    Icons.history,
-                    'Riwayat Aktivitas',
-                    () => Navigator.pushReplacementNamed(context, '/history'),
-                  ),
-                  const Divider(height: 1, indent: 16, endIndent: 16),
-                  _menu(
                     Icons.info_outline,
                     'Tentang SAMGO',
                     () => _tampilInfo(
