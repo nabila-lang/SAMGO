@@ -145,7 +145,8 @@ class ConfirmationScreen extends StatelessWidget {
                         elevation: 0,
                       ),
                       onPressed: () {
-                        // Navigator.pushNamed(context, '/history');
+                        // Diarahkan langsung ke halaman riwayat sesuai rute
+                        Navigator.pushNamed(context, '/history');
                       },
                       child: const Text(
                         'Lihat Riwayat',
