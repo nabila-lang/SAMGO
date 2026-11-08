@@ -163,7 +163,7 @@ class _PickupFormScreenState extends State<PickupFormScreen> {
               children: [
                 _label('Jenis Sampah'),
                 DropdownButtonFormField<String>(
-                  value: _jenisTerpilih,
+                  initialValue: _jenisTerpilih,
                   style: gayaIsi,
                   icon: const Icon(Icons.keyboard_arrow_down),
                   decoration: _dekorasi(

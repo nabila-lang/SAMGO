@@ -71,7 +71,7 @@ class _WebcamPageState extends State<WebcamPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text('Ambil Foto Sampah'),
+        title: const Text('Ambil Foto'),
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
       ),

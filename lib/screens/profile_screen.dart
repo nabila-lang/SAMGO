@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'account_info_screen.dart';
+import 'about_samgo_screen.dart';
 
 const Color _hijau = Color(0xFF16834A);
 const Color _hijauMuda = Color(0xFFDDF3E3);
@@ -118,39 +120,45 @@ class ProfileScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
 
-            // Menu
-            Container(
-              decoration: BoxDecoration(
-                color: _abuMuda,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: Column(
-                children: [
-                  _menu(
-                    Icons.person_outline,
-                    'Informasi Akun',
-                    () => _tampilInfo(
-                      context,
-                      'Informasi Akun',
-                      'Nama: $_nama\nEmail: $_email',
-                    ),
-                  ),
-                  const Divider(height: 1, indent: 16, endIndent: 16),
-                  _menu(
-                    Icons.info_outline,
-                    'Tentang SAMGO',
-                    () => _tampilInfo(
-                      context,
-                      'Tentang SAMGO',
-                      'SAMGO adalah layanan penjemputan sampah sukarela.\n'
-                          'Sampah dikelola, lingkungan terjaga.',
-                    ),
-                  ),
-                ],
-              ),
+// Menu
+Container(
+  decoration: BoxDecoration(
+    color: _abuMuda,
+    borderRadius: BorderRadius.circular(16),
+  ),
+  child: Column(
+    children: [
+      // 1. Ubah menu Informasi Akun agar pindah ke halaman baru
+      _menu(
+        Icons.person_outline,
+        'Informasi Akun',
+        () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const AccountInfoScreen(),
             ),
-            const SizedBox(height: 24),
-
+          );
+        },
+      ),
+      const Divider(height: 1, indent: 16, endIndent: 16),
+      
+      // 2. Ubah menu Tentang SAMGO agar pindah ke halaman baru
+      _menu(
+        Icons.info_outline,
+        'Tentang SAMGO',
+        () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const AboutSamgoScreen(),
+            ),
+          );
+        },
+      ),
+    ],
+  ),
+),
             // Logout
             SizedBox(
               width: double.infinity,

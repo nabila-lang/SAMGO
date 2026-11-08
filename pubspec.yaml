@@ -62,6 +62,8 @@ flutter:
       - images/Logo Samgo.jpg
       - images/Splashscreen.jpg
       - images/Bumi.png
+      - images/bg_daun.png
+
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
