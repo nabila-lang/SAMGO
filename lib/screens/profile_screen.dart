@@ -14,26 +14,6 @@ class ProfileScreen extends StatelessWidget {
   static const String _nama = 'Andi Pratama';
   static const String _email = 'andi@email.com';
 
-  void _tampilInfo(BuildContext context, String judul, String isi) {
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: Text(
-          judul,
-          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-        ),
-        content: Text(isi, style: const TextStyle(fontSize: 14)),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Tutup', style: TextStyle(color: _hijau)),
-          ),
-        ],
-      ),
-    );
-  }
-
   void _konfirmasiLogout(BuildContext context) {
     showDialog(
       context: context,
